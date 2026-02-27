@@ -22,7 +22,8 @@
       "name": "agent-debate",
       "source": {
         "source": "github",
-        "repo": "athrael-soju/agent-debate"
+        "repo": "athrael-soju/agent-debate",
+        "path": "agent-debate"
       },
       "description": "Multi-agent adversarial debate — four agents argue any topic through structured rounds to produce a synthesis",
       "keywords": ["debate", "multi-agent", "adversarial", "team", "argumentation"],
