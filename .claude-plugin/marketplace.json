@@ -11,8 +11,7 @@
       "name": "larvling",
       "source": {
         "source": "github",
-        "repo": "athrael-soju/Larvling",
-        "path": "larvling"
+        "repo": "athrael-soju/Larvling"
       },
       "description": "Agentic memory — automatic conversation tracking, session context, and persistent knowledge",
       "keywords": ["memory", "knowledge", "sessions", "tracking", "context"],
