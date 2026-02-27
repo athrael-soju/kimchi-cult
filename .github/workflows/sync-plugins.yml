@@ -16,23 +16,23 @@ jobs:
 
       - name: Sync larvling
         run: |
-          rm -rf larvling
+          rm -rf plugins/larvling
           git clone --depth 1 https://github.com/athrael-soju/Larvling.git _tmp_larvling
-          cp -r _tmp_larvling/larvling larvling
+          cp -r _tmp_larvling/larvling plugins/larvling
           rm -rf _tmp_larvling
 
       - name: Sync agent-debate
         run: |
-          rm -rf agent-debate
+          rm -rf plugins/agent-debate
           git clone --depth 1 https://github.com/athrael-soju/agent-debate.git _tmp_agent-debate
-          cp -r _tmp_agent-debate/agent-debate agent-debate
+          cp -r _tmp_agent-debate/agent-debate plugins/agent-debate
           rm -rf _tmp_agent-debate
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add larvling agent-debate
+          git add plugins/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
