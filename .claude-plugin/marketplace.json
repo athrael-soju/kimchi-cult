@@ -11,23 +11,21 @@
       "name": "larvling",
       "source": {
         "source": "github",
-        "repo": "athrael-soju/Larvling",
-        "path": "larvling"
+        "repo": "athrael-soju/Larvling/larvling",
       },
       "description": "Agentic memory — automatic conversation tracking, session context, and persistent knowledge",
       "keywords": ["memory", "knowledge", "sessions", "tracking", "context"],
-      "repository": "https://github.com/athrael-soju/Larvling/larvling"
+      "repository": "https://github.com/athrael-soju/Larvling"
     },
     {
       "name": "agent-debate",
       "source": {
         "source": "github",
-        "repo": "athrael-soju/agent-debate",
-        "path": "agent-debate"
+        "repo": "athrael-soju/agent-debate/agent-debate",
       },
       "description": "Multi-agent adversarial debate — four agents argue any topic through structured rounds to produce a synthesis",
       "keywords": ["debate", "multi-agent", "adversarial", "team", "argumentation"],
-      "repository": "https://github.com/athrael-soju/agent-debate/agent-debate"
+      "repository": "https://github.com/athrael-soju/agent-debate"
     }
   ]
 }
