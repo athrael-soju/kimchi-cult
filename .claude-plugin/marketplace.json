@@ -12,7 +12,7 @@
       "source": "./plugins/larvling",
       "description": "Agentic memory — automatic conversation tracking, session context, and persistent knowledge",
       "keywords": ["memory", "knowledge", "sessions", "tracking", "context"],
-      "repository": "https://github.com/athrael-soju/Larvling"
+      "repository": "https://github.com/athrael-soju/larvling"
     },
     {
       "name": "agent-debate",
