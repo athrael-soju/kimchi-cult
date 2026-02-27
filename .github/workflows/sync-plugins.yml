@@ -1,0 +1,41 @@
+name: Sync plugins from source repos
+
+on:
+  repository_dispatch:
+    types: [sync-plugins]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kimchi-cult
+        uses: actions/checkout@v4
+
+      - name: Sync larvling
+        run: |
+          rm -rf larvling
+          git clone --depth 1 https://github.com/athrael-soju/Larvling.git _tmp_larvling
+          cp -r _tmp_larvling/larvling larvling
+          rm -rf _tmp_larvling
+
+      - name: Sync agent-debate
+        run: |
+          rm -rf agent-debate
+          git clone --depth 1 https://github.com/athrael-soju/agent-debate.git _tmp_agent-debate
+          cp -r _tmp_agent-debate/agent-debate agent-debate
+          rm -rf _tmp_agent-debate
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add larvling agent-debate
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync plugins from source repos"
+            git push
+          fi
