@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout kimchi-cult
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MARKETPLACE_DISPATCH_TOKEN }}
 
       - name: Sync larvling
         run: |
