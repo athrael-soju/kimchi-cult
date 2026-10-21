@@ -23,13 +23,6 @@ jobs:
           cp -r _tmp_larvling/larvling plugins/larvling
           rm -rf _tmp_larvling
 
-      - name: Sync agent-debate
-        run: |
-          rm -rf plugins/agent-debate
-          git clone --depth 1 https://github.com/athrael-soju/agent-debate.git _tmp_agent-debate
-          cp -r _tmp_agent-debate/agent-debate plugins/agent-debate
-          rm -rf _tmp_agent-debate
-
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"

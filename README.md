@@ -13,7 +13,6 @@ claude plugin marketplace add athrael-soju/kimchi-cult
 | Plugin | Description |
 |--------|-------------|
 | **[larvling](https://github.com/athrael-soju/Larvling)** | Agentic memory — automatic conversation tracking, session context, and persistent knowledge |
-| **[agent-debate](https://github.com/athrael-soju/agent-debate)** | Multi-agent adversarial debate — four agents argue any topic through structured rounds |
 
 ## Install a plugin
 
@@ -21,5 +20,4 @@ After adding the marketplace:
 
 ```bash
 claude plugin install larvling@kimchi-cult
-claude plugin install agent-debate@kimchi-cult
 ```
